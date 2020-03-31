@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Udun.Api",
+    "\\Udun.Api\\Controller",
+    "\\Udun.Core",
+    "\\Udun.Core\\Http",
+    "\\Udun.Core\\Http\\Client",
+    "\\Udun.Form.Api"
+  ],
+  "SelectedNode": "\\Udun.Form.Api\\app.config",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,4 @@
+D:\Git2019\walletSDK_C\_net-wallet-sdk-master\Udun.Form.Api\obj\Debug\Udun.Form.Api.csprojAssemblyReference.cache
+D:\Git2019\walletSDK_C\_net-wallet-sdk-master\Udun.Form.Api\obj\Debug\Udun.FormDemo.Api.Form1.resources
+D:\Git2019\walletSDK_C\_net-wallet-sdk-master\Udun.Form.Api\obj\Debug\Udun.FormDemo.Api.Properties.Resources.resources
+D:\Git2019\walletSDK_C\_net-wallet-sdk-master\Udun.Form.Api\obj\Debug\Udun.Form.Api.csproj.GenerateResource.cache

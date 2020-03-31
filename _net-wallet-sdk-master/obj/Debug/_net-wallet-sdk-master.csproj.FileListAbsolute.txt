@@ -1,0 +1,5 @@
+D:\Git2019\walletSDK_C\_net-wallet-sdk-master\_net-wallet-sdk-master\bin\Debug\_net-wallet-sdk-master.dll
+D:\Git2019\walletSDK_C\_net-wallet-sdk-master\_net-wallet-sdk-master\bin\Debug\_net-wallet-sdk-master.pdb
+D:\Git2019\walletSDK_C\_net-wallet-sdk-master\_net-wallet-sdk-master\obj\Debug\_net-wallet-sdk-master.csprojAssemblyReference.cache
+D:\Git2019\walletSDK_C\_net-wallet-sdk-master\_net-wallet-sdk-master\obj\Debug\_net-wallet-sdk-master.dll
+D:\Git2019\walletSDK_C\_net-wallet-sdk-master\_net-wallet-sdk-master\obj\Debug\_net-wallet-sdk-master.pdb
