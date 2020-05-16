@@ -63,15 +63,23 @@
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
-            this.button8 = new System.Windows.Forms.Button();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.textBoxBT = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBoxCT = new System.Windows.Forms.TextBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.textBoxST = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -96,6 +104,14 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textBoxST);
+            this.tabPage1.Controls.Add(this.label15);
+            this.tabPage1.Controls.Add(this.button10);
+            this.tabPage1.Controls.Add(this.textBoxCT);
+            this.tabPage1.Controls.Add(this.label14);
+            this.tabPage1.Controls.Add(this.label13);
+            this.tabPage1.Controls.Add(this.textBoxBT);
+            this.tabPage1.Controls.Add(this.button9);
             this.tabPage1.Controls.Add(this.richTextBox1);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.textBox4);
@@ -124,7 +140,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(416, 257);
+            this.button1.Location = new System.Drawing.Point(207, 256);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 8;
@@ -422,17 +438,37 @@
             this.tabPage4.Text = "检测地址是否合法";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // tabPage5
+            // textBox12
             // 
-            this.tabPage5.Controls.Add(this.richTextBox6);
-            this.tabPage5.Controls.Add(this.button8);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(884, 458);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "获取支持的币种";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.textBox12.Location = new System.Drawing.Point(198, 49);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(488, 21);
+            this.textBox12.TabIndex = 21;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(120, 52);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(77, 12);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "mainCoinType";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(198, 100);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(488, 21);
+            this.textBox11.TabIndex = 19;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(120, 103);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(47, 12);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "address";
             // 
             // richTextBox5
             // 
@@ -452,21 +488,17 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // textBox11
+            // tabPage5
             // 
-            this.textBox11.Location = new System.Drawing.Point(198, 100);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(488, 21);
-            this.textBox11.TabIndex = 19;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(120, 103);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(47, 12);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "address";
+            this.tabPage5.Controls.Add(this.richTextBox6);
+            this.tabPage5.Controls.Add(this.button8);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(884, 458);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "获取支持的币种";
+            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // richTextBox6
             // 
@@ -486,21 +518,73 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // textBox12
+            // button9
             // 
-            this.textBox12.Location = new System.Drawing.Point(198, 49);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(488, 21);
-            this.textBox12.TabIndex = 21;
+            this.button9.Location = new System.Drawing.Point(620, 256);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 10;
+            this.button9.Text = "批量请求";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // label12
+            // textBoxBT
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(120, 52);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(77, 12);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "mainCoinType";
+            this.textBoxBT.Location = new System.Drawing.Point(369, 256);
+            this.textBoxBT.Name = "textBoxBT";
+            this.textBoxBT.Size = new System.Drawing.Size(56, 21);
+            this.textBoxBT.TabIndex = 11;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(298, 261);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 12);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "执行总次数";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(453, 261);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(77, 12);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "当前执行次数";
+            // 
+            // textBoxCT
+            // 
+            this.textBoxCT.Location = new System.Drawing.Point(536, 256);
+            this.textBoxCT.Name = "textBoxCT";
+            this.textBoxCT.Size = new System.Drawing.Size(56, 21);
+            this.textBoxCT.TabIndex = 14;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(701, 256);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.TabIndex = 15;
+            this.button10.Text = "停止";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // textBoxST
+            // 
+            this.textBoxST.Location = new System.Drawing.Point(536, 284);
+            this.textBoxST.Name = "textBoxST";
+            this.textBoxST.Size = new System.Drawing.Size(56, 21);
+            this.textBoxST.TabIndex = 17;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(453, 289);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(77, 12);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "成功执行次数";
             // 
             // Form1
             // 
@@ -570,6 +654,14 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBoxBT;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.TextBox textBoxCT;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.TextBox textBoxST;
+        private System.Windows.Forms.Label label15;
     }
 }
 

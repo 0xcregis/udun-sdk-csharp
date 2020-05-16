@@ -71,7 +71,9 @@ namespace Udun.FormDemo.Api
         */
         public Address CreateCoinAddress(int coinType, string callBackUrl, string alias, string walletId)
         {
-            return udunClient.CreateCoinAddress(CoinOperateBase.CodeOf(coinType).code.ToString(), GetCallBackUrl(callBackUrl), alias, walletId).data;
+            //不使用codeof
+            //return udunClient.CreateCoinAddress(CoinOperateBase.CodeOf(coinType).code.ToString(), GetCallBackUrl(callBackUrl), alias, walletId).data;
+            return udunClient.CreateCoinAddress(coinType.ToString(), GetCallBackUrl(callBackUrl), alias, walletId).data;
         }
 
         /**

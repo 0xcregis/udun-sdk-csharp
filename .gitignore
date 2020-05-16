@@ -3,3 +3,15 @@
 ################################################################################
 
 /.vs/_net-wallet-sdk-master/v16/Server/sqlite3/db.lock
+/Udun.Core/bin
+/Udun.Api/bin/Udun.Core.pdb
+/Udun.Api/bin/Udun.Api.pdb
+/Udun.Api/bin/Udun.Api.dll.config
+/Udun.Api/bin/Udun.Api.dll
+/Udun.Api/bin/Newtonsoft.Json.xml
+/Udun.Api/bin/log4net.xml
+/Udun.Form.Api/bin/SDKDebug
+*.rar
+/Udun.Form.Api/bin/Debug/TermLog
+/Udun.Form.Api/bin/Debug
+/.vs/_net-wallet-sdk-master/v16/Server/sqlite3
