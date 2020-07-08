@@ -44,23 +44,31 @@ namespace Udun.FormDemo.Api
 
         }
 
+        string transStr = "{\"address\":\"1HvpzGGv7aEgWxHNN6wi2EcDQVnP9Y7qb1\",\"amount\":\"546\",\"blockHigh\":\"573266\",\"businessId\":\"2019042610130807969201\",\"coinType\":\"0\",\"decimals\":\"8\",\"fee\":\"13339\",\"mainCoinType\":\"0\",\"memo\":\"\",\"status\":3,\"tradeId\":\"201904261013113453546\",\"tradeType\":2,\"txId\":\"3cf4f19fc8b59403bd3b8cbb30a029bcd2f509021bb3e58599af182614948710\"}";
+       
         private void button4_Click(object sender, EventArgs e)
         {
-            Trade reqTrade = new Trade()
-            {
-                address = "地址A",
-                amount = "1000000",
-                businessId = "b1021123",
-                coinType = "0",
-                mainCoinType = "0",
-                decimals = 8,
-                fee = "5640",
-                memo = "测试memo",
-                status = 1,
-                tradeId = "t1232132131",
-                tradeType = 1,
-                txId = "0xa34dq22sddadwqr243qrd32543hucdaeh83"
-            };
+            Trade reqTrade = Newtonsoft.Json.JsonConvert.DeserializeObject<Trade>(transStr);
+            reqTrade.tradeType = 1;
+            //0待审核 1审核成功 2审核驳回 3交易成功 4交易失败
+            reqTrade.status = 3;
+            reqTrade.memo = "测试充币回调";
+
+            //Trade reqTrade = new Trade()
+            //{
+            //    address = "地址A",
+            //    amount = "1000000",
+            //    businessId = "b1021123",
+            //    coinType = "0",
+            //    mainCoinType = "0",
+            //    decimals = 8,
+            //    fee = "5640",
+            //    memo = "测试memo",
+            //    status = 1,
+            //    tradeId = "t1232132131",
+            //    tradeType = 1,
+            //    txId = "0xa34dq22sddadwqr243qrd32543hucdaeh83"
+            //};
             this.richTextBox3.Text = Newtonsoft.Json.JsonConvert.SerializeObject(reqTrade);
             string msg = requestController.CallBack(reqTrade, false);
             this.richTextBox4.Text = msg;
@@ -68,21 +76,53 @@ namespace Udun.FormDemo.Api
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Trade reqTrade = new Trade()
-            {
-                address = "地址A",
-                amount = "1000000",
-                businessId = "b1021123",
-                coinType = "0",
-                mainCoinType = "0",
-                decimals = 8,
-                fee = "5640",
-                memo = "测试memo",
-                status = 1,
-                tradeId = "t1232132131",
-                tradeType = 2,
-                txId = "0xa34dq22sddadwqr243qrd32543hucdaeh83"
-            };
+            Trade reqTrade = Newtonsoft.Json.JsonConvert.DeserializeObject<Trade>(transStr);
+            reqTrade.tradeType = 2;
+            //0待审核 1审核成功 2审核驳回 3交易成功 4交易失败
+            reqTrade.status = 1;
+            reqTrade.memo = "测试提币回调（交易已发送，未到账）";
+            //Trade reqTrade = new Trade()
+            //{
+            //    address = "地址A",
+            //    amount = "1000000",
+            //    businessId = "b1021123",
+            //    coinType = "0",
+            //    mainCoinType = "0",
+            //    decimals = 8,
+            //    fee = "5640",
+            //    memo = "测试memo",
+            //    status = 1,
+            //    tradeId = "t1232132131",
+            //    tradeType = 2,
+            //    txId = "0xa34dq22sddadwqr243qrd32543hucdaeh83"
+            //};
+            this.richTextBox3.Text = Newtonsoft.Json.JsonConvert.SerializeObject(reqTrade);
+            string msg = requestController.CallBack(reqTrade, false);
+            this.richTextBox4.Text = msg;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Trade reqTrade = Newtonsoft.Json.JsonConvert.DeserializeObject<Trade>(transStr);
+            reqTrade.tradeType = 2;
+            //0待审核 1审核成功 2审核驳回 3交易成功 4交易失败
+            reqTrade.status = 3;
+            reqTrade.memo = "测试提币回调（交易已发送，已到账）";
+            //Trade reqTrade = new Trade()
+            //{
+            //    address = "地址A",
+            //    amount = "1000000",
+            //    businessId = "b1021123",
+            //    coinType = "0",
+            //    mainCoinType = "0",
+            //    decimals = 8,
+            //    fee = "5640",
+            //    memo = "测试memo",
+            //    status = 1,
+            //    tradeId = "t1232132131",
+            //    tradeType = 2,
+            //    txId = "0xa34dq22sddadwqr243qrd32543hucdaeh83"
+            //};
             this.richTextBox3.Text = Newtonsoft.Json.JsonConvert.SerializeObject(reqTrade);
             string msg = requestController.CallBack(reqTrade, false);
             this.richTextBox4.Text = msg;
@@ -90,21 +130,25 @@ namespace Udun.FormDemo.Api
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Trade reqTrade = new Trade()
-            {
-                address = "地址A",
-                amount = "1000000",
-                businessId = "b1021123",
-                coinType = "0",
-                mainCoinType = "0",
-                decimals = 8,
-                fee = "5640",
-                memo = "测试memo",
-                status = 1,
-                tradeId = "t1232132131",
-                tradeType = 2,
-                txId = "0xa34dq22sddadwqr243qrd32543hucdaeh83"
-            };
+            Trade reqTrade = Newtonsoft.Json.JsonConvert.DeserializeObject<Trade>(transStr);
+            reqTrade.tradeType = 2;
+            reqTrade.status = 1;
+            reqTrade.memo = "测试提币回调（错误的验签）";
+            //Trade reqTrade = new Trade()
+            //{
+            //    address = "地址A",
+            //    amount = "1000000",
+            //    businessId = "b1021123",
+            //    coinType = "0",
+            //    mainCoinType = "0",
+            //    decimals = 8,
+            //    fee = "5640",
+            //    memo = "测试memo",
+            //    status = 1,
+            //    tradeId = "t1232132131",
+            //    tradeType = 2,
+            //    txId = "0xa34dq22sddadwqr243qrd32543hucdaeh83"
+            //};
             this.richTextBox3.Text = Newtonsoft.Json.JsonConvert.SerializeObject(reqTrade);
             string msg = requestController.CallBack(reqTrade, true);
             this.richTextBox4.Text = msg;
@@ -205,5 +249,7 @@ namespace Udun.FormDemo.Api
         {
             stoped = true;
         }
+
+    
     }
 }

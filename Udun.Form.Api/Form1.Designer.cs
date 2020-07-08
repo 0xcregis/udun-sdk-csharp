@@ -30,6 +30,14 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.textBoxST = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
+            this.textBoxCT = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBoxBT = new System.Windows.Forms.TextBox();
+            this.button9 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -72,14 +80,7 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.richTextBox6 = new System.Windows.Forms.RichTextBox();
             this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.textBoxBT = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBoxCT = new System.Windows.Forms.TextBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.textBoxST = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -129,6 +130,74 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "请求地址";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // textBoxST
+            // 
+            this.textBoxST.Location = new System.Drawing.Point(536, 284);
+            this.textBoxST.Name = "textBoxST";
+            this.textBoxST.Size = new System.Drawing.Size(56, 21);
+            this.textBoxST.TabIndex = 17;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(453, 289);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(77, 12);
+            this.label15.TabIndex = 16;
+            this.label15.Text = "成功执行次数";
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(701, 256);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.TabIndex = 15;
+            this.button10.Text = "停止";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // textBoxCT
+            // 
+            this.textBoxCT.Location = new System.Drawing.Point(536, 256);
+            this.textBoxCT.Name = "textBoxCT";
+            this.textBoxCT.Size = new System.Drawing.Size(56, 21);
+            this.textBoxCT.TabIndex = 14;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(453, 261);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(77, 12);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "当前执行次数";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(298, 261);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 12);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "执行总次数";
+            // 
+            // textBoxBT
+            // 
+            this.textBoxBT.Location = new System.Drawing.Point(369, 256);
+            this.textBoxBT.Name = "textBoxBT";
+            this.textBoxBT.Size = new System.Drawing.Size(56, 21);
+            this.textBoxBT.TabIndex = 11;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(620, 256);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 10;
+            this.button9.Text = "批量请求";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // richTextBox1
             // 
@@ -363,6 +432,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button11);
             this.tabPage3.Controls.Add(this.button6);
             this.tabPage3.Controls.Add(this.button5);
             this.tabPage3.Controls.Add(this.richTextBox4);
@@ -378,21 +448,21 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(592, 215);
+            this.button6.Location = new System.Drawing.Point(580, 215);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.Size = new System.Drawing.Size(87, 23);
             this.button6.TabIndex = 15;
-            this.button6.Text = "错误回调";
+            this.button6.Text = "错误验签回调";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(387, 215);
+            this.button5.Location = new System.Drawing.Point(292, 215);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(112, 23);
             this.button5.TabIndex = 14;
-            this.button5.Text = "提币回调";
+            this.button5.Text = "提币(已发送)回调";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -518,73 +588,15 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button9
+            // button11
             // 
-            this.button9.Location = new System.Drawing.Point(620, 256);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 10;
-            this.button9.Text = "批量请求";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // textBoxBT
-            // 
-            this.textBoxBT.Location = new System.Drawing.Point(369, 256);
-            this.textBoxBT.Name = "textBoxBT";
-            this.textBoxBT.Size = new System.Drawing.Size(56, 21);
-            this.textBoxBT.TabIndex = 11;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(298, 261);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 12);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "执行总次数";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(453, 261);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(77, 12);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "当前执行次数";
-            // 
-            // textBoxCT
-            // 
-            this.textBoxCT.Location = new System.Drawing.Point(536, 256);
-            this.textBoxCT.Name = "textBoxCT";
-            this.textBoxCT.Size = new System.Drawing.Size(56, 21);
-            this.textBoxCT.TabIndex = 14;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(701, 256);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 15;
-            this.button10.Text = "停止";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // textBoxST
-            // 
-            this.textBoxST.Location = new System.Drawing.Point(536, 284);
-            this.textBoxST.Name = "textBoxST";
-            this.textBoxST.Size = new System.Drawing.Size(56, 21);
-            this.textBoxST.TabIndex = 17;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(453, 289);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(77, 12);
-            this.label15.TabIndex = 16;
-            this.label15.Text = "成功执行次数";
+            this.button11.Location = new System.Drawing.Point(437, 215);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(112, 23);
+            this.button11.TabIndex = 16;
+            this.button11.Text = "提币(已到账)回调";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // Form1
             // 
@@ -662,6 +674,7 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.TextBox textBoxST;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button button11;
     }
 }
 
