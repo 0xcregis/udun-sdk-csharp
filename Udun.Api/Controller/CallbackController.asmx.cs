@@ -65,7 +65,7 @@ namespace Udun.Api.Controller
         }
 
         /**
-         * 处理币付网关回调信息，包括充币
+         * 处理币付网关回调信息，包括充币（不管业务方返回的是什么值，这里是error和success，只要回调通信成功，优盾都将会认为回调成功）
          * @param timestamp
          * @param nonce
          * @param body
