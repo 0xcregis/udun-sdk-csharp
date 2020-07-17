@@ -211,7 +211,7 @@ namespace Udun.Core.Http.Client
                     IsPost = true,
                     Encoding = Encoding.UTF8,
                     Parameters = map,
-                    HeaderParameters = map,
+                    HeaderParameters = Spaheader,
                 }, "", "");
 
                 string textReg = reponseParameter.Body;
