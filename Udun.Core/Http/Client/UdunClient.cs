@@ -136,7 +136,8 @@ namespace Udun.Core.Http.Client
      * @return
      * @throws Exception
      */
-        public ResponseMessage<string> TransferAmt(string orderId, string amount, string mainCoinType, string subCoinType, string address, string callbackUrl, string memo)
+        public ResponseMessage<string> TransferAmt(string orderId, string amount, string mainCoinType, string subCoinType, string address,
+            string callbackUrl, string memo,string remark, string walletId)
         {
             Transfer transfer = new Transfer();
             transfer.address = address;
@@ -147,6 +148,8 @@ namespace Udun.Core.Http.Client
             transfer.amount = amount;
             transfer.callUrl = callbackUrl;
             transfer.memo = memo;
+            transfer.remark = remark;
+            transfer.walletId = walletId;
             return OperateResult<string, Transfer>(transfer, API.WITHDRAW);
         }
 
@@ -171,7 +174,7 @@ namespace Udun.Core.Http.Client
  * @return
  * @throws Exception
  */
-        public ResponseMessage<string> AutoTransfer(string orderId, string amount, string mainCoinType, string subCoinType, string address, string callbackUrl, string memo)
+        public ResponseMessage<string> AutoTransfer(string orderId, string amount, string mainCoinType, string subCoinType, string address, string callbackUrl, string memo, string remark, string walletId)
         {
             Transfer transfer = new Transfer();
             transfer.address = address;
@@ -182,6 +185,8 @@ namespace Udun.Core.Http.Client
             transfer.amount = amount;
             transfer.callUrl = callbackUrl;
             transfer.memo = memo;
+            transfer.remark = remark;
+            transfer.walletId = walletId;
             return OperateResult<string, Transfer>(transfer, API.AUTO_WITHDRAW);
         }
 

@@ -29,13 +29,13 @@ namespace Udun.FormDemo.Api
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ResponseMessage<string> msg = requestController.Transfer(this.textBox5.Text, this.textBox6.Text, this.textBox7.Text, this.textBox8.Text, this.textBox9.Text, this.textBox10.Text);
+            ResponseMessage<string> msg = requestController.Transfer(this.textBox5.Text, this.textBox6.Text, this.textBox7.Text, this.textBox8.Text, this.textBox9.Text, this.textBox10.Text, this.textBox13.Text, this.textBox14.Text);
             this.richTextBox2.Text = Newtonsoft.Json.JsonConvert.SerializeObject(msg);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ResponseMessage<string> msg = requestController.AutoTransfer(this.textBox5.Text, this.textBox6.Text, this.textBox7.Text, this.textBox8.Text, this.textBox9.Text, this.textBox10.Text);
+            ResponseMessage<string> msg = requestController.AutoTransfer(this.textBox5.Text, this.textBox6.Text, this.textBox7.Text, this.textBox8.Text, this.textBox9.Text, this.textBox10.Text, this.textBox13.Text, this.textBox14.Text);
             this.richTextBox2.Text = Newtonsoft.Json.JsonConvert.SerializeObject(msg);
         }
 
@@ -45,7 +45,7 @@ namespace Udun.FormDemo.Api
         }
 
         string transStr = "{\"address\":\"1HvpzGGv7aEgWxHNN6wi2EcDQVnP9Y7qb1\",\"amount\":\"546\",\"blockHigh\":\"573266\",\"businessId\":\"2019042610130807969201\",\"coinType\":\"0\",\"decimals\":\"8\",\"fee\":\"13339\",\"mainCoinType\":\"0\",\"memo\":\"\",\"status\":3,\"tradeId\":\"201904261013113453546\",\"tradeType\":2,\"txId\":\"3cf4f19fc8b59403bd3b8cbb30a029bcd2f509021bb3e58599af182614948710\"}";
-       
+
         private void button4_Click(object sender, EventArgs e)
         {
             Trade reqTrade = Newtonsoft.Json.JsonConvert.DeserializeObject<Trade>(transStr);
@@ -250,6 +250,6 @@ namespace Udun.FormDemo.Api
             stoped = true;
         }
 
-    
+
     }
 }

@@ -85,7 +85,7 @@ namespace Udun.Api.Controller
         public Address CreateCoinAddress(int coinType, string callBackUrl, string alias, string walletId)
         {
             //不使用codeof
-            return udunClient.CreateCoinAddress(coinType.ToString(), GetCallBackUrl(callBackUrl), alias, walletId).data; 
+            return udunClient.CreateCoinAddress(coinType.ToString(), GetCallBackUrl(callBackUrl), alias, walletId).data;
             //return udunClient.CreateCoinAddress(CoinOperateBase.CodeOf(coinType).code.ToString(), GetCallBackUrl(callBackUrl), alias, walletId).data;
         }
 
@@ -97,10 +97,10 @@ namespace Udun.Api.Controller
          * @return
          */
         [WebMethod]
-        public ResponseMessage<string> Transfer(string mainCoinType, string subCoinType, string amount, string address, string callBackUrl, string memo)
+        public ResponseMessage<string> Transfer(string mainCoinType, string subCoinType, string amount, string address, string callBackUrl, string memo, string remark, string walletId)
         {
             string orderId = Calendar.getInstance().getTimeInMillis().ToString();
-            ResponseMessage<string> resp = udunClient.TransferAmt(orderId, amount, mainCoinType, subCoinType, address, GetCallBackUrl(callBackUrl), memo);
+            ResponseMessage<string> resp = udunClient.TransferAmt(orderId, amount, mainCoinType, subCoinType, address, GetCallBackUrl(callBackUrl), memo, remark, walletId);
             if (resp.code == 200)
                 resp.data = orderId.ToString();
             return resp;
@@ -114,10 +114,10 @@ namespace Udun.Api.Controller
          * @return
          */
         [WebMethod]
-        public ResponseMessage<string> AutoTransfer(string mainCoinType, string subCoinType, string amount, string address, string callBackUrl, string memo)
+        public ResponseMessage<string> AutoTransfer(string mainCoinType, string subCoinType, string amount, string address, string callBackUrl, string memo, string remark, string walletId)
         {
             string orderId = Calendar.getInstance().getTimeInMillis().ToString();
-            ResponseMessage<string> resp = udunClient.AutoTransfer(orderId, amount, mainCoinType, subCoinType, address, GetCallBackUrl(callBackUrl), memo);
+            ResponseMessage<string> resp = udunClient.AutoTransfer(orderId, amount, mainCoinType, subCoinType, address, GetCallBackUrl(callBackUrl), memo, remark, walletId);
             if (resp.code == 200)
                 resp.data = orderId.ToString();
             return resp;

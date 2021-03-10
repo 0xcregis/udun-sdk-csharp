@@ -83,10 +83,10 @@ namespace Udun.FormDemo.Api
          * @param address
          * @return
          */
-        public ResponseMessage<string> Transfer(string mainCoinType, string subCoinType, string amount, string address, string callBackUrl, string memo)
+        public ResponseMessage<string> Transfer(string mainCoinType, string subCoinType, string amount, string address, string callBackUrl, string memo, string remark, string walletId)
         {
             string orderId = Calendar.getInstance().getTimeInMillis().ToString();
-            ResponseMessage<string> resp = udunClient.TransferAmt(orderId, amount, mainCoinType, subCoinType, address, GetCallBackUrl(callBackUrl), memo);
+            ResponseMessage<string> resp = udunClient.TransferAmt(orderId, amount, mainCoinType, subCoinType, address, GetCallBackUrl(callBackUrl), memo, remark, walletId);
             if (resp.code == 200)
                 resp.data = orderId.ToString();
             return resp;
@@ -99,10 +99,10 @@ namespace Udun.FormDemo.Api
          * @param address
          * @return
          */
-        public ResponseMessage<string> AutoTransfer(string mainCoinType, string subCoinType, string amount, string address, string callBackUrl, string memo)
+        public ResponseMessage<string> AutoTransfer(string mainCoinType, string subCoinType, string amount, string address, string callBackUrl, string memo, string remark, string walletId)
         {
             string orderId = Calendar.getInstance().getTimeInMillis().ToString();
-            ResponseMessage<string> resp = udunClient.AutoTransfer(orderId, amount, mainCoinType, subCoinType, address, GetCallBackUrl(callBackUrl), memo);
+            ResponseMessage<string> resp = udunClient.AutoTransfer(orderId, amount, mainCoinType, subCoinType, address, GetCallBackUrl(callBackUrl), memo, remark, walletId);
             if (resp.code == 200)
                 resp.data = orderId.ToString();
             return resp;
